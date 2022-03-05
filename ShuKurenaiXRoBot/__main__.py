@@ -808,7 +808,7 @@ def main():
                   [                  
                        InlineKeyboardButton(
                              text="Support🚑",
-                             url=f"https://t.me/tezzasupportchannel"),
+                             url=f"https://t.me/tezzasupportgroup"),
                        InlineKeyboardButton(
                              text="Updates🛰️",
                              url="https://t.me/tezzasupportchannel")
