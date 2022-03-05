@@ -403,7 +403,7 @@ def shukurenai_about_callback(update, context):
                     InlineKeyboardButton(text="Credits", callback_data="shukurenai_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/muhammedalthaf174/groupbot"),
+                    InlineKeyboardButton(text="Source Code", url="https://github.com/muhammedalthaf174/tezzaRobot"),
                     InlineKeyboardButton(text="Try inline!​​", switch_inline_query_current_chat=""), 
                  ],
                  [
