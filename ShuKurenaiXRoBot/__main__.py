@@ -95,7 +95,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="➗ Add 𝑻𝒆𝒛𝒛𝒂❥︎ To Your Group ➗", url="t.me/ShuKurenaiXRoBot?startgroup=new"),
+            text="➗ Add 𝑻𝒆𝒛𝒛𝒂❥︎ To Your Group ➗", url="t.me/Tezza_Robot?startgroup=new"),
     ],
     [
         InlineKeyboardButton(
