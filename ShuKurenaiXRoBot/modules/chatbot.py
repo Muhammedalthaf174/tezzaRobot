@@ -1,7 +1,7 @@
 import requests, functools
-from  import pbot, BOT_ID
+from ShuKurenaiXRoBot import pbot, BOT_ID
 from pyrogram import filters
-from DewmiBot.modules.sql.chatbot_sql import is_chatbot_indb, addchatbot, rmchatbot
+from ShuKurenaiXRoBot.modules.sql.chatbot_sql import is_chatbot_indb, addchatbot, rmchatbot
 from googletrans import Translator
 
 tr = Translator()
@@ -82,7 +82,7 @@ async def chatbot(_, message):
     await message.reply_text(msg.text)
 
 @pbot.on_message(
-    filters.regex("Rose|@szrosebot")
+    filters.regex("Tezza|@tezzasupportgroup")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
