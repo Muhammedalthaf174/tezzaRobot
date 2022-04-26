@@ -448,7 +448,7 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>╔═━「 Current ShuKurenai Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>╔═━「 Current 𝑻𝒆𝒛𝒛𝒂❥︎ Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     result += "\n<b>╘═━「 Powered By ShuKurenaiSupport」</b>"
     update.effective_message.reply_photo(
@@ -459,7 +459,7 @@ def stats(update: Update, context: CallbackContext):
                             InlineKeyboardButton(
                                 "Support", url=f"https://t.me/{SUPPORT_CHAT}"),
                             InlineKeyboardButton(
-                                "Updates", url=f"https://t.me/shukurenai007")
+                                "Updates", url=f"https://t.me/tezzasupportchannel")
                         ],
                     ]
                 ),
