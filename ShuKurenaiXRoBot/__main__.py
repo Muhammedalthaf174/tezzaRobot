@@ -83,14 +83,13 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 *Hello {} !*
 
-✪ I'Am an Group Management Bot [⚡](https://te.legra.ph/file/e520067ac3c691abfe07d.jpg)
-✪ *Am Very Fast And  More Efficient  I Provide Awesome  Features!*
-────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
-────────────────────────
-✪ Hit /help to see my available commands.
+───────────────────────
+✪ *I'ᴍ ᴘᴏᴡᴇʀғᴜʟ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ [🔥](https://te.legra.ph/file/e520067ac3c691abfe07d.jpg)*
+✪ *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
+───────────────────────
+✪ ʜɪᴛ /help ᴛᴏ sᴇᴇ ᴍʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs.
 """
+
 
 buttons = [
     [
@@ -107,10 +106,10 @@ buttons = [
     ],
     [                  
                        InlineKeyboardButton(
-                             text="Support🚑",
+                             text="Support",
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                        InlineKeyboardButton(
-                             text="Updates🛰️",
+                             text="Updates",
                              url=f"https://t.me/tezzasupportchannel/14"),
     ],
 
@@ -122,9 +121,6 @@ Click on the button bellow to get description about specifics command[.](https:/
 
 HELP_MSG = "Click the button below to get help manu in your pm."
 DONATE_STRING = """Contact to **@Tezza_Robot**"""
-HELP_IMG = "https://te.legra.ph/file/dce2e3e278de5ca987bfc.jpg"
-GROUP_IMG = "https://te.legra.ph/file/9df146a1a8cfdcfc48057.jpg"
-
 
 
 IMPORTED = {}
