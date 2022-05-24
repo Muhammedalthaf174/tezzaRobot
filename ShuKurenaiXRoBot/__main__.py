@@ -87,6 +87,16 @@ PM_START_TEXT = """
 ✪ *I'ᴍ ᴘᴏᴡᴇʀғᴜʟ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ [🔥](https://te.legra.ph/file/e520067ac3c691abfe07d.jpg)*
 ✪ *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
 ───────────────────────
+I have lots of handy features such as:
+‣ Warning system
+‣ Artificial intelligence
+‣ Flood control system
+‣ Note keeping system
+‣ Filters keeping system
+‣ Approvals and much more.
+───────────────────────
+➛ᴛʀʏ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍʏ ᴀʙɪʟɪᴛɪᴇs
+───────────────────────
 ✪ ʜɪᴛ /help ᴛᴏ sᴇᴇ ᴍʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs.
 """
 
@@ -234,21 +244,13 @@ def start(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
             )
     else:
-        first_name = update.effective_user.first_name
-        update.effective_message.reply_photo(
-             GROUP_IMG, caption= "*Hey {},*\n*𝑻𝒆𝒛𝒛𝒂❥︎ here*\n*Power lavel time* : {} ".format(
-             first_name,uptime
+        update.effective_message.reply_text(
+            "ʜᴇʟʟᴏ! ɪ'ᴍ ᴀʟɪᴠᴇ".format(
+                
             ),
-            parse_mode=ParseMode.MARKDOWN,
-        reply_markup=InlineKeyboardMarkup(
-                [
-                  [
-                  InlineKeyboardButton(text="✧ Support ", url=f"https://telegram.dog/{SUPPORT_CHAT}"),
-                  InlineKeyboardButton(text="✧ Updates ", url=f"t.me/tezzasupportchannel/14"),
-                  ]
-                ]
-            ),
+            parse_mode=ParseMode.HTML,
         )
+
        
 
 def error_handler(update, context):
@@ -373,38 +375,25 @@ def help_button(update, context):
         pass
 
 
-def shukurenai_about_callback(update, context):
+@run_async
+def shukurenai_callback_handler(update, context):
     query = update.callback_query
     if query.data == "shukurenai_":
         query.message.edit_text(
-            text="๏ I'm *𝑻𝒆𝒛𝒛𝒂❥︎*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_𝑻𝒆𝒛𝒛𝒂❥︎'s licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for 𝑻𝒆𝒛𝒛𝒂❥︎.",
+            text="""Welcome to Help Menu. 
+────────────────────────
+*Sᴇʟᴇᴄᴛ  Aʟʟ  Cᴏᴍᴍᴀɴᴅs  Fᴏʀ  Fᴜʟʟ  Hᴇʟᴘ  Oʀ  Sᴇʟᴇᴄᴛ  Cᴀᴛᴀɢᴏʀʏ  Fᴏʀ  Mᴏʀᴇ  Hᴇʟᴘ  Dᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ  Oɴ  Sᴇʟᴇᴄᴛᴇᴅ  Fɪᴇʟᴅs*""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
-                    InlineKeyboardButton(text="Admins", callback_data="shukurenai_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="shukurenai_notes"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Support", callback_data="shukurenai_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="shukurenai_credit"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/muhammedalthaf174/tezzaRobot"),
-                    InlineKeyboardButton(text="Try inline!​​", switch_inline_query_current_chat=""), 
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="shukurenai_back"),
-                 ]
+                    [
+                     InlineKeyboardButton(text="➕ 𝘼𝙡𝙡 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨 ➕", callback_data="help_back"),
+                    ],                           
+                    [InlineKeyboardButton(text="𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚 𝙈𝙚 ❓", callback_data="tiana_help"),
+                     InlineKeyboardButton(text="𝙈𝙪𝙨𝙞𝙘 𝘽𝙤𝙩 🎧", callback_data="tiana_music")],
+                    [InlineKeyboardButton(text="🔙 𝘽𝙖𝙘𝙠", callback_data="tiana_back"),
+                     InlineKeyboardButton(text="𝙄𝙣𝙡𝙞𝙣𝙚 🔗", switch_inline_query_current_chat="")],
                 ]
             ),
         )
