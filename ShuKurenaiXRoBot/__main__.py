@@ -375,27 +375,41 @@ def help_button(update, context):
         pass
 
 
-@run_async
-def shukurenai_callback_handler(update, context):
+def shukurenai_about_callback(update, context):
     query = update.callback_query
     if query.data == "shukurenai_":
         query.message.edit_text(
-            text="""Welcome to Help Menu. 
-────────────────────────
-*Sᴇʟᴇᴄᴛ  Aʟʟ  Cᴏᴍᴍᴀɴᴅs  Fᴏʀ  Fᴜʟʟ  Hᴇʟᴘ  Oʀ  Sᴇʟᴇᴄᴛ  Cᴀᴛᴀɢᴏʀʏ  Fᴏʀ  Mᴏʀᴇ  Hᴇʟᴘ  Dᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ  Oɴ  Sᴇʟᴇᴄᴛᴇᴅ  Fɪᴇʟᴅs*""",
+            text="๏ I'm *Shu Kurenai*, a powerful group management bot built to help you manage your group easily."
+            "\n• I can restrict users."
+            "\n• I can greet users with customizable welcome messages and even set a group's rules."
+            "\n• I have an advanced anti-flood system."
+            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
+            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
+            "\n• I check for admins' permissions before executing any command and more stuffs"
+            "\n\n_Shu Kurenai's licensed under the GNU General Public License v3.0_"
+            "\n\n Click on button bellow to get basic help for ShuKurenaiXRoBot.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                     InlineKeyboardButton(text="➕ 𝘼𝙡𝙡 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨 ➕", callback_data="help_back"),
-                    ],                           
-                    [InlineKeyboardButton(text="𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚 𝙈𝙚 ❓", callback_data="tiana_help"),
-                     InlineKeyboardButton(text="𝙈𝙪𝙨𝙞𝙘 𝘽𝙤𝙩 🎧", callback_data="tiana_music")],
-                    [InlineKeyboardButton(text="🔙 𝘽𝙖𝙘𝙠", callback_data="tiana_back"),
-                     InlineKeyboardButton(text="𝙄𝙣𝙡𝙞𝙣𝙚 🔗", switch_inline_query_current_chat="")],
+                 [
+                    InlineKeyboardButton(text="Admins", callback_data="shukurenai_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="shukurenai_notes"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Support", callback_data="shukurenai_support"),
+                    InlineKeyboardButton(text="Credits", callback_data="shukurenai_credit"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Source Code", url="https://github.com/shukurenai007/ShuKurenaiXRoBot"),
+                    InlineKeyboardButton(text="Try inline!​​", switch_inline_query_current_chat=""), 
+                 ],
+                 [
+                    InlineKeyboardButton(text="Go Back", callback_data="shukurenai_back"),
+                 ]
                 ]
             ),
+     
         )
     elif query.data == "shukurenai_back":
         first_name = update.effective_user.first_name
