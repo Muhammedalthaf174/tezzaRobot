@@ -43,7 +43,6 @@ from ShuKurenaiXRoBot.modules.helper_funcs.extraction import extract_user
 from ShuKurenaiXRoBot import telethn
 from ShuKurenaiXRoBot import SUPPORT_CHAT
 
-SHU = "https://telegra.ph//file/1247053aadf93e8e371a2.jpg"
 
 def no_by_per(totalhp, percentage):
     """
@@ -446,26 +445,15 @@ def set_about_me(update: Update, context: CallbackContext):
                 ),
             )
 
+@run_async
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>╔═━「 Current 𝑻𝒆𝒛𝒛𝒂❥︎ Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>📊 Current stats:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result += "\n<b>╘═━「 Powered By Tezzasupport」</b>"
-    update.effective_message.reply_photo(
-        SHU,caption=result, 
-        reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                "Support", url=f"https://t.me/{SUPPORT_CHAT}"),
-                            InlineKeyboardButton(
-                                "Updates", url=f"https://t.me/tezzasupportchannel")
-                        ],
-                    ]
-                ),
-                parse_mode=ParseMode.HTML,
-            )
-               
+    update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)
+
+
+@run_async               
 def about_bio(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     message = update.effective_message
