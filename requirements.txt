@@ -83,5 +83,6 @@ tzlocal
 pendulum
 fuzzysearch
 img2pdf
+pytimeparse
 multicolorcaptcha
 git+https://github.com/python-telegram-bot/ptbcontrib.git
