@@ -14,7 +14,7 @@ from .helper_funcs.chat_status import bot_admin, connection_status, user_admin_n
 from .helper_funcs.decorators import zaid, zaidcallback
 from .. import log, updater
 
-import Telegram.modules.sql.welcome_sql as sql
+import ShuKurenaiXRoBot.modules.sql.welcome_sql as sql
 
 j = updater.job_queue
 
