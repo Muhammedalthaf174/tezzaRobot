@@ -81,12 +81,11 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
-
-───────────────────────
-✪ *I'ᴍ ᴘᴏᴡᴇʀғᴜʟ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ [🔥](https://te.legra.ph/file/e520067ac3c691abfe07d.jpg)*
-✪ *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
-───────────────────────
+────「 Tezza Robot 」────
+*Hᴇʟʟᴏ ɪ'ᴍ ᴛᴇᴢᴢᴀ*   
+✪ I'ᴍ ᴘᴏᴡᴇʀғᴜʟ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ [🔥](https://telegra.ph/file/a8cc05eb6490cf23a57aa.jpg)
+✪ I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!
+─────────────────────
 I have lots of handy features such as:
 ‣ Warning system
 ‣ Artificial intelligence
@@ -96,15 +95,12 @@ I have lots of handy features such as:
 ‣ Approvals and much more.
 ───────────────────────
 ➛ᴛʀʏ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍʏ ᴀʙɪʟɪᴛɪᴇs
-───────────────────────
-✪ ʜɪᴛ /help ᴛᴏ sᴇᴇ ᴍʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs.
 """
-
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➗ Add 𝑻𝒆𝒛𝒛𝒂❥︎ To Your Group ➗", url="t.me/Tezza_Robot?startgroup=new"),
+            text="➗ Add Tezza To Your Group ➗", url="t.me/Tezza_Robot?startgroup=new"),
     ],
     [
         InlineKeyboardButton(
@@ -379,15 +375,15 @@ def shukurenai_about_callback(update, context):
     query = update.callback_query
     if query.data == "shukurenai_":
         query.message.edit_text(
-            text="๏ I'm *Shu Kurenai*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Tezza*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
             "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Shu Kurenai's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for ShuKurenaiXRoBot.",
+            "\n\n_Tezza licensed under the GNU General Public License v3.0_"
+            "\n\n Click on button bellow to get basic help for Tezza.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -401,7 +397,7 @@ def shukurenai_about_callback(update, context):
                     InlineKeyboardButton(text="Credits", callback_data="shukurenai_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/shukurenai007/ShuKurenaiXRoBot"),
+                    InlineKeyboardButton(text="Owner", url="https://t.me/althafser"),
                     InlineKeyboardButton(text="Try inline!​​", switch_inline_query_current_chat=""), 
                  ],
                  [
@@ -481,10 +477,9 @@ def shukurenai_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
-                    InlineKeyboardButton(text="sakhav", url="https://github.com/sakhavvaavaj93"),
-                    InlineKeyboardButton(text="Althafser", url="https://github.com/muhammedalthaf174"),
-                    InlineKeyboardButton(text="emna", url="https://github.com/mhdalthaf875"), 
+                 [                 
+                    InlineKeyboardButton(text="Althafser", url="https://althafser"),
+                 
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="shukurenai_"),
@@ -801,20 +796,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[𝐈 𝐀𝐦 𝐎𝐧𝐥𝐢𝐧𝐞](https://te.legra.ph/file/fdd4730f27038b6a25a82.jpg)", parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                  [                  
-                       InlineKeyboardButton(
-                             text="Support🚑",
-                             url=f"https://t.me/tezzasupportgroup"),
-                       InlineKeyboardButton(
-                             text="Updates🛰️",
-                             url="https://t.me/tezzasupportchannel")
-                     ] 
-                ]
-            ),
-        )
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "ʏᴇs ɪ'ᴍ ᴀʟɪᴠᴇ 😌")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
