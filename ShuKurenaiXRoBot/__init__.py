@@ -293,7 +293,6 @@ async def eor(msg: Message, **kwargs):
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
-SUDO_USERS = list(SUDO_USERS)
 WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
