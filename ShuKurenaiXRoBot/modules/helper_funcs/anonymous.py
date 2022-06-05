@@ -7,7 +7,7 @@ from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
 from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 
 from ShuKurenaiXRoBot import DEV_USERS, SUDO_USERS, dispatcher
-from .decorators import kigcallback
+from .decorators import shucallback
 
 
 class AdminPerms(Enum):
